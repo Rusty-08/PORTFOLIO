@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, 'sans-serif';
+}
+
+:root {
+    --bg-color: #00244A;
+    --color-yellow: #FFE3B9;
+    --color-blue: #BCE6F7;
+    --color-pure-yellow: #FFC061;
+    --icon-color: rgb(255, 255, 255);
+    --low-opacity-color: rgba(255, 255, 255, 0.7);
+    --footer-color: #001730;
+    --transition-1: 0.175s ease-in-out;
+    --transition-2: 0.750s ease-in-out;
+}
+
+.navbar {
+    background-color: var(--bg-color) !important;
+}
+
+.logo {
+    position: absolute;
+    left: 3rem;
+    width: 7rem;
+}
+
+.btn-bars {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    border-color: var(--color-blue) !important;
+}
+
+.icon-btn {
+    color: var(--color-blue);
+}
+
+.navigation-lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 0.8rem !important;
+}
+
+.nav-link:not(.active) {
+    color: var(--color-blue);
+    opacity: 0.5;
+    font-weight: 300 !important;
+}
+
+.contact-btn {
+    position: absolute;
+    right: 3rem;
+}
+
+.contact-btn a {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0;
+    border-color: var(--color-yellow);
+    width: 6rem;
+    color: var(--color-yellow);
+    padding: 0.2rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.contact-btn a:hover {
+    border-color: var(--color-pure-yellow);
+    color: var(--color-pure-yellow);
+}
+
+.navbar-dark {
+    --bs-navbar-active-color: var(--color-yellow) !important;
+}
+
+#hero {
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.hero-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.name-works {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+.my-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.my-name h2 {
+    color: var(--color-yellow);
+    font-size: 2.5rem;
+    margin: 0 !important;
+    position: relative;
+}
+
+.my-name h2::before {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 0.15rem;
+    right: -0.7rem;
+    top: 10%;
+    opacity: 0.8;
+    border-radius: 1rem;
+    background-color: var(--color-yellow);
+}
+.my-name h2::after {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 0.15rem;
+    right: -1.1rem;
+    border-radius: 1rem;
+    top: 10%;
+    opacity: 0.8;
+    background-color: var(--color-yellow);
+}
+
+.my-name span {
+    color: var(--color-blue);
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+.name-works h5 {
+    color: var(--color-blue);
+    opacity: 0.5;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.3rem;
+}
+
+.hire-me {
+    background-color: var(--color-pure-yellow);
+    padding: 0.2rem 1rem;
+    border: solid 1px var(--color-pure-yellow);
+    color: var(--bg-color);
+    font-size: 1rem;
+    transition: var(--transition-1);
+}
+
+.hire-me:hover {
+    background-color: transparent;
+    border: solid 1px var(--color-yellow);
+    color: var(--color-yellow);
+}
+
+.my-projects {
+    background-color: transparent;
+    padding: 0.2rem 1rem;
+    border: none;
+    color: var(--color-blue);
+    border: solid 1px var(--color-blue);
+    transition: var(--transition-1);
+}
+
+.my-projects a {
+    color: var(--color-blue);
+    margin-left: 0.3rem;
+    font-size: 0.9rem;
+    transition: var(--transition-1);
+}
+
+.my-projects:hover {
+    color: var(--color-pure-yellow);
+    border: solid 1px var(--color-pure-yellow);
+}
+
+.my-projects:hover a {
+    color: var(--color-pure-yellow);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    color: var(--color-blue);
+}
+
+.social-icons i {
+    opacity: 0.5;
+}
+
+.social-icons i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hero-image {
+    width: 50%;
+    display: flex;    
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+.hero-image img {
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .container-fluid {
+        --bs-gutter-x: 0rem !important;
+    }
+    .logo {
+        left: 1rem;
+        top: 0.8rem;
+    }
+    .btn-bars {
+        right: 1rem;
+        top: 0.8rem;
+        border-color: rgba(188, 230, 247, 0.5) !important;
+        padding: 0.25rem 0.5rem !important;
+    }
+    .navbar {
+        height: 4rem !important;
+        background-color: var(--bg-color) !important;
+    }
+    .navigation-lists {
+        margin-top: 3rem;
+        position: relative;
+        height: calc(100vh - 4rem);
+        width: 100%;
+        background-color: var(--bg-color);
+        transition: var(--transition-1);
+        padding-bottom: 5rem;
+    }
+    .nav-link {
+        font-size: 1rem !important;
+    }
+    .contact-btn {
+        left: 0;
+        right: 0;
+        bottom: 4rem;
+    }
+    .navbar-dark .btn-bars {
+        --bs-navbar-color: rgba(188, 230, 247, 0.7) !important;
+    }
+    .navbar {
+        --bs-navbar-toggler-focus-width: 0.1rem !important;
+    }
+}
