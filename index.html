@@ -20,13 +20,13 @@
       <button class="navbar-toggler btn-bars" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navigation-lists" id="navbarText">
-        <ul class="navbar-nav gap-4">
+      <div class="collapse navbar-collapse list-group simple-list-example-scrollspy" id="navbarText">
+        <ul class="navbar-nav gap-4" >
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" href="#hero">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about-me">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Resume</a>
@@ -41,30 +41,49 @@
       </div>
     </div>
   </nav>
-  <main id="hero">
-    <div class="hero-container">
-      <div class="hero-wrapper">
-        <div class="name-works">
-          <div class="my-name">
-            <h2>RUSTY GUNAO</h2>
-            <span>works</span>
-          </div>   
-          <h5>Future Web Developer/UI/UX Designer</h5>
+  <main data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-smooth-scroll="true" class="scrollspy-example" data-bs-offset="0" tabindex="0">
+    <section id="hero">
+      <div class="hero-container">
+        <div class="hero-wrapper">
+          <div class="name-works">
+            <div class="my-name">
+              <h2>RUSTY GUNAO</h2>
+              <span>works</span>
+            </div>   
+            <h5>Future Web Developer/UI/UX Designer</h5>
+          </div>
+          <div class="hero-buttons">
+            <button class="hire-me">Hire Me</button>
+            <button class="my-projects">My Projects<a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+          </div>
+          <div class="social-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-github"></i>
+          </div>
         </div>
-        <div class="hero-buttons">
-          <button class="hire-me">Hire Me</button>
-          <button class="my-projects">My Projects<a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
-        </div>
-        <div class="social-icons">
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-square-github"></i>
+        <div class="hero-image">
+          <img src="img/sample hero bg.png" alt="">
         </div>
       </div>
-      <div class="hero-image">
-        <img src="img/sample hero bg.png" alt="">
+    </section>
+    <section id="about-me">
+      <div class="about-container">
+        <div class="about-content-1">
+          <h2>HI THERE,<br>PLEASE TO MEET YOU.</h2>
+          <span>I'm currently a college student with a course of BS in Information Technology and still in a mode of learning in becoming a frontend web developer.</span>
+          <button class="download-cv">Download CV</button>
+        </div>
+        <div class="about-content-2">
+          <h2>LET’S BRING YOUR BRAND INTO LIFE ONLINE.</h2>
+          <span>I'm currently a college student with a course of BS in Information Technology and still in a mode of learning in becoming a frontend web developer.</span>
+          <button class="lets-talk">Let's Talk!</button>  
+        </div>
       </div>
-    </div>
-  </main>    
+      <div class="section-name">
+        <div class="name-container">About</div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
