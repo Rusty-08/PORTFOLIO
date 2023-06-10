@@ -21,6 +21,7 @@
 
 .navbar {
     background-color: var(--bg-color) !important;
+    height: 3rem;
 }
 
 .logo {
@@ -40,10 +41,13 @@
     color: var(--color-blue);
 }
 
-.navigation-lists {
+.navigation-lists, #hero, .my-name, #about-me, #resume, .school-icon, .skills-content, #portfolio {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navigation-lists {
     text-align: center;
 }
 
@@ -89,9 +93,6 @@
     background-color: var(--bg-color);
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .hero-container {
     width: 70%;
@@ -120,10 +121,7 @@
     gap: 0.5rem;
 }
 .my-name {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 1.5rem;
 }
 .my-name h2 {
@@ -256,10 +254,7 @@
 /* About Section */
 #about-me {
     width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 60vh;
     background-color: var(--bg-color);
     position: relative;
 }
@@ -275,8 +270,8 @@
 
 .about-content-1, .about-content-2 {
     width: 45%;
-    height: 100%;
-    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    height: 80%;
+    padding: 2rem 1.5rem 1rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -286,11 +281,11 @@
 }
 
 .about-content-1 {
-    border: solid 1px var(--color-yellow);
+    border: solid 1px rgba(255, 227, 185, 0.5);
 }
 
 .about-content-2 {
-    border: solid 1px var(--color-blue);
+    border: solid 1px rgba(188, 230, 247, 0.5);
 }
 
 .about-container h2 {
@@ -317,7 +312,7 @@
     content: '';
     position: absolute;
     height: 0.6rem;
-    top: 1.5rem;
+    top: 1rem;
     width: calc(100% - 3rem);
     border-style: solid;
     border-width: 2px 0px 4px 0px;
@@ -329,7 +324,7 @@
     content: '';
     position: absolute;
     height: 0.6rem;
-    top: 1.5rem;
+    top: 1rem;
     width: calc(100% - 3rem);
     border-style: solid;
     border-width: 2px 0px 4px 0px;
@@ -363,7 +358,7 @@
     opacity: 1;
 }
 
-.section-name {
+.section-about {
     position: absolute;
     top: 0.2rem;
     left: 0.5rem;
@@ -371,12 +366,12 @@
     color: var(--color-blue);
 }
 
-.name-container {
+.name-section {
     position: relative;
     opacity: 0.3;
 }
 
-.name-container::before, .name-container::after {
+.name-section::before, .name-section::after {
     content: '';
     position: absolute;
     height: 80%;
@@ -386,24 +381,178 @@
     background-color: var(--color-pure-yellow);
 }
 
-.name-container::before {
+.name-section::before {
     right: -0.2rem;
 }
 
-.name-container::after {
+.name-section::after {
     right: -0.4rem;
 }
 
+/* Resume Section */
 
+#resume {
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-color);
+    padding: 2rem 0rem;
+    position: relative;
+    flex-direction: column;
+}
 
+.education-container {
+    height: 60vh;
+    width: 70%;
+    position: relative;
+}
 
+.education-content-1, .education-content-2, .education-content-3 {
+    position: absolute;
+    height: 25%;
+    width: 70%;
+    border: solid 1px rgba(188, 230, 247, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
 
+.school-icon {
+    width: 16%;
+    height: 100%;
+    background-color: rgba(188, 230, 247, 0.2);
+}
 
+.school-icon i {
+    font-size: 2.2rem;
+    color: var(--color-yellow);
+    opacity: 0.7;
+}
 
+.junior-high, .senior-high, .college {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem;
+}
 
+.junior-high h5, .senior-high h5, .college h5 {
+    font-size: 0.8rem;
+    margin: 0 !important;
+    color: rgba(188, 230, 247, 0.5);
+    font-weight: 300;
+}
 
+.junior-high h4, .senior-high h4, .college h4 {
+    font-size: 0.9rem;
+    margin: 0 !important;
+    line-height: 1.5rem;
+    color: var(--color-blue);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
 
+.section-resume {
+    position: absolute;
+    top: 0.2rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    color: var(--color-blue);
+}
 
+.education, .portfolio, .skills {
+    border-bottom: solid 1px var(--color-blue);
+    color: var(--color-blue);
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-align: left;
+    width: 70%;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skills-container {
+    height: calc(100vh - 4rem);
+    width: 70%;
+}
+
+.skills-content {
+    width: 30%;
+    height: 42%;
+    flex-direction: column;
+    padding: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(188, 230, 247, 0.1);
+}
+
+.skills-content i {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+    color: var(--color-yellow);
+}
+
+.skills-content h4, .skills-content p, .skills-content span {
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 0.8rem;
+    font-weight: 300;
+    color: var(--color-blue);
+}
+
+.skills-content h4 {
+    font-weight: 400;
+    color: var(--color-yellow);
+    font-family: 'Roboto', sans-serif;
+}
+
+.skills-content span {
+    font-size: 0.6rem;
+    opacity: 0.7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skills {
+    text-align: right;
+    margin-top: 3rem;
+}
+
+/* Portfolio Section */
+
+#portfolio {
+    height: auto !important;
+    width: 100%;
+    padding: 2rem 0rem 1rem 0rem;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    position: relative;
+}
+
+.section-portfolio {
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    color: var(--color-blue);
+}
+
+.portfolio {
+    text-align: left;
+}
+
+.portfolio-container-1, .portfolio-container-2, .portfolio-container-3 {
+    height: auto !important;
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.portfolio-content {
+    border: 1px solid rgba(255, 227, 185, 0.2);
+    height: 40vh;
+    width: 50%
+}
 
 
 
@@ -528,10 +677,13 @@
     }
     .about-container {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
     }
     .about-content-1, .about-content-2 {
         width: 100%;
+        height: 40%;
     }
     .about-content-1 h2, .about-content-2 h2 {
         font-size: 1rem;
@@ -542,5 +694,72 @@
     .download-cv, .lets-talk {
         font-size: 0.6rem;
         margin-top: 0.5rem;
+    }
+    .education-container {
+        height: 40vh;
+        margin-top: 1rem;
+        width: 90%;
+    }
+    .education-content-1, .education-content-2, .education-content-3 {
+        width: 100%;
+        height: 27%;
+    }
+    .school-icon {
+        width: 25%;
+    }
+    .school-icon i {
+        font-size: 2rem;
+    }
+    .junior-high, .senior-high, .college {
+        width: 75%;
+    }
+    .junior-high h5, .senior-high h5, .college h5 {
+        font-size: 0.7rem;
+    }
+    .junior-high h4, .senior-high h4, .college h4 {
+        font-size: 0.8rem;
+    }
+    .education {
+        display: none;
+    }
+    .skills {
+        display: none;
+    }
+    .skills-container {
+        width: 90%;
+        height: 90vh;
+        margin-top: 5rem;
+    }
+    .skills-content {
+        width: 48%;
+        height: 30%;
+        border: 1px solid rgba(255, 227, 185, 0.2);
+        flex-direction: column;
+        padding: 0.5rem;
+        overflow: hidden;
+    }
+    .skills-content img {
+        height: 4rem;
+        margin-bottom: 0.5rem;
+    }
+    .skills-content h4, .skills-content p, .skills-content span {
+        text-align: center;
+        line-height: 0.8rem;
+        font-size: 0.6rem;
+        font-weight: 300;
+        color: var(--color-blue);
+    }
+    
+    .skills-content h4 {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: var(--color-yellow);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .skills-content span {
+        font-size: 0.6rem;
+        opacity: 0.7;
+        font-family: 'Roboto', sans-serif;
     }
 }
