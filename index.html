@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid navbar-dark">
       <a class="navbar-brand logo" href="#">
-        <img class="w-50" src="img/logo 1.png" alt="logo">
+        <img class="w-50" src="img/logo.png" alt="logo">
       </a>
       <button class="navbar-toggler btn-bars" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,12 +37,12 @@
           </li>
         </ul>
         <span class="contact-btn">
-            <a href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
         </span>
       </div>
     </div>
   </nav>
-  <main data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-smooth-scroll="true" class="scrollspy-example" data-bs-offset="0" tabindex="0">
+  <main data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-smooth-scroll="true" class="scrollspy-example">
     <!-- HOME SECTION STARTS HERE -->
     <section id="hero">
       <div class="hero-container">
@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="img/sample hero bg.png" alt="">
+          <img src="img/hero-image.png" alt="">
         </div>
       </div>
     </section>
@@ -155,23 +155,19 @@
     </section>
     <section id="portfolio">
       <h4 class="portfolio">MY PROJECTS</h4>
-      <div class="portfolio-container-1 d-flex flex-lg-row gap-3 justify-content-between">
-        <div class="portfolio-content ">
+      <div class="portfolio-container">
+        <div class="portfolio-content">
+          <img src="" alt="">
+        </div>
+        <div class="portfolio-content">
           
         </div>
         <div class="portfolio-content">
           
         </div>
-      </div>
-      <div class="portfolio-container-2 d-flex flex-lg-row gap-3 justify-content-between">
-          <div class="portfolio-content">
-            
-          </div>
-          <div class="portfolio-content">
-            
-          </div>
-      </div>
-      <div class="portfolio-container-3 d-flex flex-lg-row gap-3 justify-content-between">
+        <div class="portfolio-content">
+          
+        </div>
         <div class="portfolio-content">
           
         </div>
@@ -181,6 +177,61 @@
       </div>
       <div class="section-portfolio">
         <div class="name-section">Portfolio</div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact-container">
+        <div class="form">
+          <h4>Contact Me!</h4>
+          <span>Send me a Message and i'll respond as soon as possible</span>
+          <div class="mb-3-info mt-4">
+            <div class="email">
+              <label for="email-address" class="form-label">Email address:</label>
+              <input type="email" class="form-control mb-3" id="email-address" placeholder="Enter your Email here . . .">
+            </div>
+            <div class="phone">
+              <label for="mobile-number" class="form-label">Phone Number:</label>
+              <input type="tel" class="form-control mb-3" id="mobile-number" placeholder="Enter your Number here . . .">
+            </div>
+          </div>
+          <div class="mb-3-message">
+            <label for="text-area" class="form-label">Message:</label>
+            <textarea class="form-control" id="text-area" rows="3" placeholder="Enter your Message here . . ."></textarea>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn">Send Now</button>
+          </div>
+        </div>
+        <div class="personal-info">
+          <div class="avatar">
+            <img src="img/profile-picture.png" alt="profile">
+          </div>
+          <div class="info">
+            <div class="icons">
+              <i class="fa fa-envelope"></i>
+              <i class="fa fa-mobile"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="detail">
+              <span><a href="#gunaorusty@gmail.com">gunaorusty@gmail.com</a></span>
+              <span>(+63) 995 201 6228</span>
+              <span>Bulan, Sorsogon, 4706, PH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-contact">
+        <div class="name-section">Contact</div>
+      </div>
+      <div class="footer">
+        <div class="social-icons">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-square-github"></i>
+        </div>
+        <div class="owner">
+          <p>RUSTY GUNAO<span class="ml-1" id="current-year"></span></p>
+        </div>
       </div>
     </section>
   </main>
