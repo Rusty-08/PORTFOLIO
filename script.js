@@ -1,3 +1,15 @@
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  var navbarHeight = navbar.offsetHeight;
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > navbarHeight) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
+});
+
 function smoothScroll(target, duration) {
   const targetElement = document.querySelector(target);
   const navbarHeight = document.querySelector('.navbar').offsetHeight;
@@ -25,8 +37,7 @@ function smoothScroll(target, duration) {
 }
 
 // Smooth scroll when  nav-link is clicked
-const navLinks = document.querySelectorAll('.nav-link');
-const contactLink = document.querySelector('.contact');
+const navLinks = document.querySelectorAll(['.nav-link', '.contack']);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -38,7 +49,7 @@ navLinks.forEach((link) => {
 });
 
 // Hide navbar toggler when clicked 
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).forEach(function(link) {
   link.addEventListener('click', function() {
     if (window.innerWidth < 992) {
       document.querySelector('.navbar-collapse').classList.remove('show');
@@ -49,5 +60,5 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
 // Get the current year
 
 const currentYear = new Date().getFullYear();
-  
+
   document.getElementById("current-year").textContent = currentYear;
