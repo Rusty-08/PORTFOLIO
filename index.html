@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="script.js" defer></script>
-  <title>tRusty</title>
+  <title>Rusty</title>
 </head>
 <body>
   <!-- NAVIGATION STARTS HERE -->
@@ -18,10 +18,10 @@
       <a class="navbar-brand logo" href="#">
         <img class="w-50" src="img/logo.png" alt="logo">
       </a>
-      <button class="navbar-toggler btn-bars" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler btn-bars" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navigation-lists" id="navbarText">
+      <div class="collapse navbar-collapse navigation-lists" id="navigation">
         <ul class="navbar-nav gap-4" >
           <li class="nav-item">
             <a class="nav-link active" aria-controls="page" href="#hero">Home</a>
@@ -42,7 +42,7 @@
       </div>
     </div>
   </nav>
-  <main data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+  <main data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" class="scrollspy-example" data-bs-offset="0" tabindex="0">
     <!-- HOME SECTION STARTS HERE -->
     <section id="hero">
       <div class="hero-container">
@@ -52,11 +52,11 @@
               <h2>RUSTY GUNAO</h2>
               <span>works</span>
             </div>   
-            <h5>Future Web Developer/UI/UX Designer</h5>
+            <h5>Future Front-end web developer</h5>
           </div>
           <div class="hero-buttons">
             <button class="hire-me">Hire Me</button>
-            <button class="my-projects">My Projects<a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+            <button class="my-projects"><a href="#portfolio">My Projects<i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
           </div>
           <div class="social-icons">
             <i class="fa-brands fa-square-facebook"></i>
@@ -121,31 +121,31 @@
         <div class="skills-content position-absolute top-0 start-0">
           <i class="fa-brands fa-html5"></i>
           <h4>HTML</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum architecto, repudiandae debitis ratione alias quis.</p>
+          <p>I know the proper use of semantic tags and structuring content, understanding and utilizing HTML forms for capturing user input and data submission.</p>
           <span>Started in 2020</span>
         </div>
         <div class="skills-content position-absolute top-0 end-0">
           <i class="fa-brands fa-css3-alt"></i>
           <h4>CSS</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum architecto, repudiandae debitis ratione alias quis.</p>
-          <span>Started in 2020</span>
+          <p>I have been designing the layout and style elements in the webpage using flex-box. The wireframes that I used was Bootstrap and Tailwind CSS.</p>
+          <span>Started in 2021</span>
         </div>
         <div class="skills-content position-absolute top-50 start-50 translate-middle">
           <i class="fa-brands fa-js"></i>
           <h4>JavaScript</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum architecto, repudiandae debitis ratione alias quis.</p>
+          <p>To perform dynamic and interactive operations on web pages, I used to study the JS HTML DOM and still studying React JS</p>
           <span>Started in 2022</span>
         </div>
         <div class="skills-content position-absolute bottom-0 start-0">
           <i class="fa-brands fa-php"></i>
           <h4>PHP</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum architecto, repudiandae debitis ratione alias quis.</p>
+          <p>I have been using and still studying PHP for server-side scripting language in performing dynamic and interactive operations on web pages.</p>
           <span>Started in 2023</span>
         </div>
         <div class="skills-content position-absolute bottom-0 end-0">
           <i class="fa-brands fa-figma"></i>
           <h4>FIGMA</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum architecto, repudiandae debitis ratione alias quis.</p>
+          <p>I have been using Figma, a cloud-based design and prototyping tool, to collaborate on interface design projects.</p>
           <span>Started in 2021</span>
         </div>
       </div>
@@ -153,32 +153,88 @@
         <div class="name-section">Resume</div>
       </div>
     </section>
+    <!-- PORTFOLIO SECTION STARTS HERE -->
     <section id="portfolio">
       <h4 class="portfolio">MY PROJECTS</h4>
       <div class="portfolio-container">
         <div class="portfolio-content">
-          <img src="" alt="">
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="portfolio-content">
-          
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="portfolio-content">
-          
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="portfolio-content">
-          
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="portfolio-content">
-          
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
         <div class="portfolio-content">
-          
+          <img src="img/portfolio-c.jpg" alt="project">
+          <div class="content-details">
+            <h3>BUSINESS</h3>
+            <h2>The Shoe Store</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non dolor, libero nobis consequatur deserunt hic itaque excepturi veritatis deleniti.</p>
+            <div class="project-links">
+              <button><a href="">Live view</a></button>
+              <a class="repo" href="">Github repo<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section-portfolio">
         <div class="name-section">Portfolio</div>
       </div>
     </section>
+    <!-- CONTACT SECTION STARTS HERE -->
     <section id="contact">
       <div class="contact-container">
         <div class="form">

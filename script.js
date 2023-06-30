@@ -35,14 +35,13 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-// Smooth scroll when  nav-link is clicked
-const navLinks = document.querySelectorAll(['.nav-link', '.contack']);
+const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a']);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    const duration = 400;
+    const duration = 500;
     smoothScroll(target, duration);
   });
 });
