@@ -15,8 +15,8 @@
     --icon-color: rgb(255, 255, 255);
     --low-opacity-color: rgba(255, 255, 255, 0.7);
     --footer-color: #001730;
-    --transition-1: 0.175s ease-in-out;
-    --transition-2: 0.750s ease-in-out;
+    --transition-1: all 0.175s ease-in-out;
+    --transition-2: all 0.750s ease-in-out;
 }
 
 .navbar {
@@ -46,7 +46,9 @@
     color: var(--color-blue);
 }
 
-.navigation-lists, #hero, .my-name, #about-me, #resume, .school-icon, .skills-content, #portfolio, #contact, .personal-info, .avatar, .portfolio-content, .content-details {
+.navigation-lists, #hero, .my-name, #about-me, #resume, 
+.school-icon, .skills-content, #portfolio, #contact, 
+.personal-info, .avatar, .portfolio-content, .content-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,9 +344,12 @@
     margin-top: 1rem;
     padding: 0.3rem 1rem;
     border: none;
-    color: var(--bg-color);
-    opacity: 0.8;
     transition: var(--transition-1);
+}
+
+.download-cv a, .lets-talk a {
+    text-decoration: none;
+    color: var(--bg-color);
 }
 
 .download-cv {
@@ -355,12 +360,26 @@
     background-color: var(--color-blue);
 }
 
-.download-cv:hover {
-    opacity: 1;
+.download-cv:hover, .lets-talk:hover {
+    opacity: 0.8;
 }
 
-.lets-talk:hover {
-    opacity: 1;
+.download-cv:active {
+    border: 1px solid var(--color-yellow) !important;
+    background-color: transparent !important;
+}
+
+.lets-talk:active {
+    border: 1px solid var(--color-blue) !important;
+    background-color: transparent !important;
+}
+
+.download-cv:active a {
+    color: var(--color-yellow) !important;
+}
+
+.lets-talk:active a {
+    color: var(--color-blue) !important;
 }
 
 .section-about {
@@ -555,12 +574,14 @@
     display: grid;
     gap: 1rem;
     grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
 .portfolio-content {
     height: 13rem;
     position: relative;
+    transition: var(--transition-1);
+    overflow: hidden;
     transition: var(--transition-1);
 }
 
@@ -568,17 +589,17 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: contain;
     z-index: 1;
+    opacity: 0.7;
 }
 
 .content-details {
     padding: 1rem 1.5rem;
     color: var(--bg-color);
     background-color: var(--color-blue);
-    height: 95%;
+    height: 93%;
     z-index: 3;
-    width: 97%;
+    width: 96%;
     flex-direction: column;
     align-items: flex-start;
     display: none;
@@ -592,7 +613,7 @@
 .content-details h3 {
     font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.175rem;
     line-height: 0.4rem;
     color: rgb(0, 0, 188);
@@ -608,19 +629,20 @@
 }
 
 .portfolio-content:hover img {
-    opacity: 0.5;
+    filter: blur(5px);
 }
 
 .project-links a:hover {
     opacity: 0.7;
 }
+
 .project-links button {
     padding: 0.2rem 1rem;
     font-size: 0.8rem;
     background-color: var(--bg-color);
     border-radius: 0.2rem;
     border: none;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
 }
 
 .project-links .repo {
@@ -692,6 +714,11 @@
     color: var(--color-blue) !important;
 }
 
+.form textarea {
+    overflow: hidden;
+    resize: none;
+}
+
 .form input::placeholder, .form textarea::placeholder {
     color: var(--color-blue);
     opacity: 0.5;
@@ -703,12 +730,17 @@
     position: absolute;
     right: 0;
     bottom: -3rem;
-    opacity: 0.9;
 }
 
 .form button:hover {
     background-color: var(--color-yellow);
-    opacity: 1;
+    opacity: 0.8;
+}
+
+.form button:active {
+    border: 1px solid var(--color-yellow) !important;
+    color: var(--color-yellow) !important;
+    font-weight: 300;
 }
 
 .personal-info {
@@ -735,6 +767,7 @@
     opacity: 0.5;
     transition: var(--transition-1);
 }
+
 .avatar img:hover {
     mix-blend-mode: normal;
     opacity: 1;
@@ -773,6 +806,7 @@
 }
 
 .detail span a:hover {
+    text-decoration: underline;
     color: var(--color-yellow);
 }
 
@@ -1063,7 +1097,7 @@
     }
     .form {
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 0;
     }
     .personal-info{
         width: 100%;

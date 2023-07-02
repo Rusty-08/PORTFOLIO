@@ -5,8 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Bootstrap JavaScript (bundle includes Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Add Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="script.js" defer></script>
   <title>Rusty</title>
@@ -22,7 +25,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse navigation-lists" id="navigation">
-        <ul class="navbar-nav gap-4" >
+        <ul class="navbar-nav gap-4">
           <li class="nav-item">
             <a class="nav-link active" aria-controls="page" href="#hero">Home</a>
           </li>
@@ -37,12 +40,12 @@
           </li>
         </ul>
         <span class="contact-btn">
-            <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </span>
       </div>
     </div>
   </nav>
-  <main data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" class="scrollspy-example" data-bs-offset="0" tabindex="0">
+  <main data-bs-spy="scroll" data-bs-target="#navigation" class="scrollspy-example" data-bs-offset="0" tabindex="0">
     <!-- HOME SECTION STARTS HERE -->
     <section id="hero">
       <div class="hero-container">
@@ -75,12 +78,16 @@
         <div class="about-content-1">
           <h2>HI THERE,<br>PLEASE TO MEET YOU.</h2>
           <span>I'm currently a college student with a course of BS in Information Technology and still in a mode of learning in becoming a frontend web developer.</span>
-          <button class="download-cv">Download CV</button>
+          <button class="download-cv">
+            <a href="">Download CV</a>
+          </button>
         </div>
         <div class="about-content-2">
           <h2>LET’S BRING YOUR BRAND INTO LIFE ONLINE.</h2>
           <span>I will bring your brand's unique story to life, creating captivating and user-centric web experiences that will leave a lasting impression in your costumers or users.</span>
-          <button class="lets-talk">Let Us Talk!</button>  
+          <button class="lets-talk">
+            <a href="">Let Us Talk!</a>
+          </button>  
         </div>
       </div>
       <div class="section-about">
@@ -115,8 +122,8 @@
             <h5>Sorsogon State University - Bulan Campus</h5>
           </div>
         </div>
-      </div> 
-      <h4 class="skills">SKILLS</h4>
+      </div>
+      <h4 class="skills">WHAT I KNOW</h4>
       <div class="skills-container position-relative">
         <div class="skills-content position-absolute top-0 start-0">
           <i class="fa-brands fa-html5"></i>
@@ -239,7 +246,7 @@
       <div class="contact-container">
         <div class="form">
           <h4>Contact Me!</h4>
-          <span>Send me a Message and i'll respond as soon as possible</span>
+          <span>I will respond as soon as possible</span>
           <div class="mb-3-info mt-4">
             <div class="email">
               <label for="email-address" class="form-label">Email address:</label>
@@ -252,7 +259,7 @@
           </div>
           <div class="mb-3-message">
             <label for="text-area" class="form-label">Message:</label>
-            <textarea class="form-control" id="text-area" rows="3" placeholder="Enter your Message here . . ."></textarea>
+            <textarea class="form-control" id="text-area" oninput="adjustTextareaHeight()" rows="3" placeholder="Enter your Message here . . ."></textarea>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn">Send Now</button>
@@ -269,7 +276,7 @@
               <i class="fa-solid fa-location-dot"></i>
             </div>
             <div class="detail">
-              <span><a href="#gunaorusty@gmail.com">gunaorusty@gmail.com</a></span>
+              <span><a href="mailto:gunaorusty@gmail.com?subject=Hello&body=I%20hope%20you%20are%20doing%20well">gunaorusty@gmail.com</a></span>
               <span>(+63) 995 201 6228</span>
               <span>Bulan, Sorsogon, 4706, PH</span>
             </div>
