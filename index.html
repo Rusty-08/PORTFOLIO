@@ -58,13 +58,13 @@
             <h5>Future Front-end web developer</h5>
           </div>
           <div class="hero-buttons">
-            <button class="hire-me">Hire Me</button>
+            <button class="hire-me"><a href="#contact">Hire Me</a></button>
             <button class="my-projects"><a href="#portfolio">My Projects<i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
           </div>
           <div class="social-icons">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-square-github"></i>
+            <a href="https://www.facebook.com/gunaorusty" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/rusty-g-gunao-a8544625a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZGEezse8TCu2ZEqlyElnVw%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Rusty-08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
           </div>
         </div>
         <div class="hero-image">
@@ -79,14 +79,14 @@
           <h2>HI THERE,<br>PLEASE TO MEET YOU.</h2>
           <span>I'm currently a college student with a course of BS in Information Technology and still in a mode of learning in becoming a frontend web developer.</span>
           <button class="download-cv">
-            <a href="">Download CV</a>
+            <a href="mycv/mycv.pdf" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">Download CV</a>
           </button>
         </div>
         <div class="about-content-2">
           <h2>LET’S BRING YOUR BRAND INTO LIFE ONLINE.</h2>
           <span>I will bring your brand's unique story to life, creating captivating and user-centric web experiences that will leave a lasting impression in your costumers or users.</span>
           <button class="lets-talk">
-            <a href="">Let Us Talk!</a>
+            <a href="#contact">Let Us Talk!</a>
           </button>  
         </div>
       </div>
@@ -244,27 +244,33 @@
     <!-- CONTACT SECTION STARTS HERE -->
     <section id="contact">
       <div class="contact-container">
-        <div class="form">
+        <form class="form" action="https://formspree.io/f/mleyryar" method="POST">
           <h4>Contact Me!</h4>
           <span>I will respond as soon as possible</span>
           <div class="mb-3-info mt-4">
             <div class="email">
-              <label for="email-address" class="form-label">Email address:</label>
-              <input type="email" class="form-control mb-3" id="email-address" placeholder="Enter your Email here . . .">
+              <label for="email-address" class="form-label">Email address</label>
+              <input type="email" name="email" class="form-control mb-3" id="email-address" placeholder="Enter your Email here . . ." required>
             </div>
-            <div class="phone">
-              <label for="mobile-number" class="form-label">Phone Number:</label>
-              <input type="tel" class="form-control mb-3" id="mobile-number" placeholder="Enter your Number here . . .">
+            <div class="row-2 d-flex flex-row justify-content-between gap-3">
+              <div class="phone w-50">
+                <label for="mobile-number" class="form-label">Phone Number</label>
+                <input type="tel" name="tel" class="form-control mb-3" id="mobile-number" placeholder="Your Number . . .">
+              </div>
+              <div class="phone w-50">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="The subject . . ." required>
+              </div>
             </div>
           </div>
           <div class="mb-3-message">
-            <label for="text-area" class="form-label">Message:</label>
-            <textarea class="form-control" id="text-area" oninput="adjustTextareaHeight()" rows="3" placeholder="Enter your Message here . . ."></textarea>
+            <label for="text-area" class="form-label">Message</label>
+            <textarea class="form-control" id="text-area" name="message" oninput="adjustTextareaHeight()" rows="4" placeholder="Enter your Message here . . ." required></textarea>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn">Send Now</button>
           </div>
-        </div>
+        </form>
         <div class="personal-info">
           <div class="avatar">
             <img src="img/profile-picture.png" alt="profile">
@@ -288,9 +294,9 @@
       </div>
       <div class="footer">
         <div class="social-icons">
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-square-github"></i>
+          <a href="https://www.facebook.com/gunaorusty" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="linkedin.com/in/rusty-g-gunao-a8544625a" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Rusty-08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
         </div>
         <div class="owner">
           <p>RUSTY GUNAO<span class="ml-1" id="current-year"></span></p>

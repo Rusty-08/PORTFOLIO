@@ -26,7 +26,8 @@
 }
 
 .navbar-scrolled {
-    box-shadow: 0 0.5px 0px rgba(91, 142, 164, 0.5);
+    /* box-shadow: 0 0.5px 0px rgba(91, 142, 164, 0.5); */
+    box-shadow: 0 3px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 .logo {
@@ -104,9 +105,10 @@
 /* Hero Section */
 #hero {
     background-color: var(--bg-color);
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
 }
+
 .hero-container {
     width: 70%;
     height: 100%;
@@ -123,20 +125,22 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .name-works {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 2rem;
     gap: 0.5rem;
+    margin-top: 3.5rem;
 }
+
 .my-name {
     flex-direction: row;
     gap: 1.5rem;
 }
+
 .my-name h2 {
     color: var(--color-yellow);
     font-size: 3rem;
@@ -184,6 +188,7 @@
     display: flex;
     align-items: flex-start;
     gap: 1.3rem;
+    margin-bottom: -2rem;
 }
 
 .hire-me {
@@ -196,9 +201,18 @@
     transition: var(--transition-1);
 }
 
+.hire-me a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
 .hire-me:hover {
     background-color: transparent;
     border: solid 1px var(--color-yellow);
+    color: var(--color-yellow);
+}
+
+.hire-me:hover a {
     color: var(--color-yellow);
 }
 
@@ -235,10 +249,13 @@
 .social-icons {
     gap: 2rem;
     font-size: 1.5rem;
-    color: var(--color-blue);
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--color-blue);
 }
 
 .social-icons i {
@@ -259,6 +276,7 @@
     position: absolute;
     right: 0;
 }
+
 .hero-image img {
     width: 90%;
 }
@@ -354,10 +372,12 @@
 
 .download-cv {
     background-color: var(--color-yellow);
+    border: 1px solid var(--color-yellow);
 }
 
 .lets-talk {
     background-color: var(--color-blue);
+    border: solid 1px var(--color-blue);
 }
 
 .download-cv:hover, .lets-talk:hover {
@@ -462,7 +482,7 @@
 }
 
 .junior-high h5, .senior-high h5, .college h5 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0 !important;
     color: rgba(188, 230, 247, 0.5);
     font-weight: 300;
@@ -471,7 +491,7 @@
 .junior-high h4, .senior-high h4, .college h4 {
     font-size: 0.9rem;
     margin: 0 !important;
-    line-height: 1.5rem;
+    line-height: 2rem;
     color: var(--color-blue);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Smooth scroll animation with overshoot effect
+// Smooth scrolling function
 function smoothScroll(target, duration) {
   const targetElement = document.querySelector(target);
   const navbarHeight = document.querySelector('.navbar').offsetHeight;
@@ -18,34 +18,33 @@ function smoothScroll(target, duration) {
   const startPosition = window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime = null;
-  const container = document.documentElement;
 
   function animation(currentTime) {
     if (startTime === null) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
+    const ease = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, ease);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
 
-    // Modify the easing function here for the desired effect
-    if (timeElapsed < duration) {
-      const progress = timeElapsed / duration;
-      const overshoot = Math.sin(progress * (Math.PI / 2)); // Adjust overshoot strength
-      const ease = startPosition + distance * overshoot;
-      container.scrollTo(0, ease);
-      requestAnimationFrame(animation);
-    } else {
-      container.scrollTo(0, targetPosition);
-    }
+  // Easing function
+  function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t * t + b;
+    t -= 2;
+    return (c / 2) * (t * t * t + 2) + b;
   }
 
   requestAnimationFrame(animation);
 }
 
-const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a']);
+const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a', '.hire-me a', '.lets-talk a']);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    const duration = 500;
+    const duration = 700;
     smoothScroll(target, duration);
   });
 });
