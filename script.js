@@ -1,7 +1,7 @@
 // Navbar effect while scrolling
 window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  var scrollPosition = window.scrollY;
+  const navbar = document.querySelector('.navbar');
+  const scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
     navbar.classList.add('navbar-scrolled');
@@ -44,7 +44,7 @@ navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    const duration = 700;
+    const duration = 500;
     smoothScroll(target, duration);
   });
 });
@@ -61,11 +61,18 @@ document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).f
 // textare auto resize height
 function adjustTextareaHeight() {
   const textarea = document.getElementById('text-area');
-  textarea.style.height = 'auto'; // Reset the height to auto to recalculate
+  textarea.style.height = 'auto';
 
-  // Set the new height to fit the content
   textarea.style.height = textarea.scrollHeight + 'px';
 }
+
+// Remove the inputted data in form after the submit button is clicked
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+  setTimeout(function() {
+    document.getElementById("myForm").reset();
+  }, 2000);
+});
 
 // Get the current year
 const currentYear = new Date().getFullYear();
