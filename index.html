@@ -45,27 +45,32 @@
       </div>
     </div>
   </nav>
+  <div class="img-left">
+    <img src="img/hero-bg.png" alt="">
+  </div>
+  <div class="img-right">
+    <img src="img/hero-bg.png" alt="">
+  </div>
   <main data-bs-spy="scroll" data-bs-target="#navigation" class="scrollspy-example" data-bs-offset="0" tabindex="0">
     <!-- HOME SECTION STARTS HERE -->
     <section id="hero">
       <div class="hero-container">
-        <div class="hero-wrapper">
-          <div class="name-works">
-            <!-- <div class="my-name">
-              <h2>RUSTY GUNAO</h2>
-              <span>works</span>
-            </div>    -->
-            <h5 class="mb-3">Transforming visions into captivating digital realities</h5>
-            <h6 class="mb-1">I am <span>Rusty Gunao</span></h6>
-            <p class="mb-5">Future front-end developer who merges artistry and technology to craft pixel-perfect, user-centric websites that redefine online experiences.</p>
-          </div>
-          <div class="hero-buttons mb-5">
-            <button class="hire-me"><a href="#contact">Hire Me</a></button>
-            <button class="my-projects"><a href="#portfolio">My Projects<i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
-          </div>
+        <div class="hero-name-icons">
+          <i class="fa-brands fa-connectdevelop"></i>
+          <i class="fa-brands fa-connectdevelop"></i>
+          <i class="fa-brands fa-connectdevelop"></i>
         </div>
-        <div class="hero-image">
-          <img src="img/hero-image.png" alt="">
+        <div class="hero-wrapper">
+          <h1>Hi, I'm Rusty.</h1>
+          <div id="text-container">
+            <p>{ <span id="text"></span> }</p>
+            <span id="cursor"></span>
+          </div>          
+        </div>
+        <div class="hero-buttons">
+          <button class="my-projects">
+            <a href="#portfolio">My Projects</a>
+          </button>
         </div>
       </div>
       <div class="social-icons">
@@ -86,7 +91,7 @@
         </div>
         <div class="about-content-2">
           <h2>LET’S BRING YOUR BRAND INTO LIFE ONLINE.</h2>
-          <span>I will bring your brand's unique story to life, creating captivating and user-centric web experiences that will leave a lasting impression in your costumers or users.</span>
+          <span>I will bring your brand's unique story to life, creating captivating and user-centric web experiences that will leave a lasting impression in your costumers.</span>
           <button class="lets-talk">
             <a href="#contact">Let Us Talk!</a>
           </button>  
@@ -98,9 +103,9 @@
     </section>
     <!-- RESUME SECTION STARTS HERE -->
     <section id="resume">
-      <h4 class="education">EDUCATION</h4></div>
+      <h4 class="education">MY EDUCATION</h4></div>
       <div class="education-container">
-        <div class="education-content-1 top-0 start-0">
+        <div class="education-content-1">
           <div class="school-icon"><i class="fa-solid fa-school-circle-check"></i></div>
           <div class="junior-high">
             <h5>2016 - 2018</h5>
@@ -108,7 +113,7 @@
             <h5>Bulan National High School</h5>
           </div>
         </div>
-        <div class="education-content-2 top-50 start-50 translate-middle">
+        <div class="education-content-2">
           <div class="school-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="senior-high">
             <h5>2018 - 2020</h5>
@@ -116,7 +121,7 @@
             <h5>Bulan National High School</h5>
           </div>
         </div>
-        <div class="education-content-3 bottom-0 end-0">
+        <div class="education-content-3">
           <div class="school-icon"><i class="fa-solid fa-building-columns"></i></div>
           <div class="college">
             <h5>2020 - 2023</h5>
@@ -267,7 +272,7 @@
           </div>
           <div class="mb-3-message">
             <label for="text-area" class="form-label">Message</label>
-            <textarea class="form-control" id="text-area" name="message" oninput="adjustTextareaHeight()" rows="4" placeholder="Enter your Message here . . ." required></textarea>
+            <textarea class="form-control" id="text-area" name="message" oninput="adjustTextareaHeight()" rows="5" placeholder="Enter your Message here . . ." required></textarea>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn">Send Now</button>
@@ -284,9 +289,9 @@
               <i class="fa-solid fa-location-dot"></i>
             </div>
             <div class="detail">
-              <span><a href="mailto:gunaorusty@gmail.com?subject=Hello&body=I%20hope%20you%20are%20doing%20well">gunaorusty@gmail.com</a></span>
+              <span><a href="mailto:gunaorusty@gmail.com">gunaorusty@gmail.com</a></span>
               <span>(+63) 995 201 6228</span>
-              <span>Bulan, Sorsogon, 4706, PH</span>
+              <span class="text-nowrap">Bulan, Sorsogon, 4706, PH</span>
             </div>
           </div>
         </div>

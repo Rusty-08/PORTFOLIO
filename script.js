@@ -44,7 +44,7 @@ navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    const duration = 500;
+    const duration = 700;
     smoothScroll(target, duration);
   });
 });
@@ -57,6 +57,52 @@ document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).f
     }
   });
 });
+
+// typing animation in hero section
+function typeWriter(sentence, containerId, callback) {
+  const container = document.getElementById(containerId);
+  const textElement = document.getElementById('text');
+  const cursorElement = document.getElementById('cursor');
+
+  let charIndex = 0;
+  textElement.textContent = '';
+  cursorElement.style.display = 'block';
+
+  const typingInterval = setInterval(() => {
+    if (charIndex < sentence.length) {
+      textElement.textContent += sentence[charIndex];
+      charIndex++;
+    } else {
+      clearInterval(typingInterval);
+      cursorElement.style.display = 'none';
+      setTimeout(() => {
+        textElement.textContent = '';
+        callback();
+      }, 2000);
+    }
+  }, 70);
+}
+
+const sentences = [
+  'Front-end web developer',
+  'UI/UX designer',
+  'Freelancer',
+  'Transforming visions into digital realities'
+];
+
+let index = 0;
+
+function typeSentences() {
+  if (index < sentences.length) {
+    typeWriter(sentences[index], 'text-container', typeSentences);
+    index++;
+  } else {
+    index = 0;
+    typeSentences();
+  }
+}
+
+typeSentences();
 
 // textare auto resize height
 function adjustTextareaHeight() {
