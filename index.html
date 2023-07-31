@@ -58,6 +58,8 @@
         <div class="hero-name-icons">
           <i class="fa-brands fa-connectdevelop"></i>
           <i class="fa-brands fa-connectdevelop"></i>
+          <i class="fa-solid fa-bug"></i>
+          <i class="fa-brands fa-connectdevelop"></i>
           <i class="fa-brands fa-connectdevelop"></i>
         </div>
         <div class="hero-wrapper">
@@ -68,7 +70,7 @@
           </div>          
         </div>
         <div class="hero-buttons">
-          <button class="my-projects">
+          <button class="my-projects boxs">
             <a href="#portfolio">My Projects</a>
           </button>
         </div>
@@ -82,19 +84,25 @@
     <!-- ABOUT SECTION STARTS HERE -->
     <section id="about-me">
       <div class="about-container">
-        <div class="about-content-1">
-          <h2>HI THERE,<br>PLEASE TO MEET YOU.</h2>
-          <span>I'm currently a college student with a course of BS in Information Technology and still in a mode of learning in becoming a frontend web developer.</span>
-          <button class="download-cv">
-            <a href="mycv/mycv.pdf" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">Download CV</a>
-          </button>
-        </div>
-        <div class="about-content-2">
-          <h2>LET’S BRING YOUR BRAND INTO LIFE ONLINE.</h2>
-          <span>I will bring your brand's unique story to life, creating captivating and user-centric web experiences that will leave a lasting impression in your costumers.</span>
-          <button class="lets-talk">
-            <a href="#contact">Let Us Talk!</a>
-          </button>  
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="about-content-1 card p-lg-2 animated-element boxs">
+              <div class="card-body text-light">
+                <h5 class="card-title">HI THERE,<br>PLEASE TO MEET YOU.</h5>
+                <p class="card-text">I'm currently a college student with a course of BS in Information Technology and pursuing a career in becoming a frontend web developer.</p>
+                <a href="mycv/mycv.pdf" class="btn" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">Download CV</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="about-content-2 card p-lg-2 animated-element boxs">
+              <div class="card-body text-light">
+                <h5 class="card-title">LET’S BRING<br>YOUR BRAND INTO LIFE ONLINE.</h5>
+                <p class="card-text">Let's bring your brand's unique story to life, creating captivating web experiences that will leave a lasting impression in your costumers.</p>
+                <a href="#contact" class="btn lets-talk">Let Us Talk!</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section-about">
@@ -103,65 +111,82 @@
     </section>
     <!-- RESUME SECTION STARTS HERE -->
     <section id="resume">
-      <h4 class="education">MY EDUCATION</h4></div>
+      <h4 class="education">MY EDUCATION</h4>
       <div class="education-container">
-        <div class="education-content-1">
+        <div class="education-content-1 animated-element boxs">
           <div class="school-icon"><i class="fa-solid fa-school-circle-check"></i></div>
           <div class="junior-high">
-            <h5>2016 - 2018</h5>
+            <h5 class="school-year">2016 - 2018</h5>
             <h4>COMPUTER HARDWARE SERVICING</h4>
             <h5>Bulan National High School</h5>
           </div>
         </div>
-        <div class="education-content-2">
+        <div class="education-content-2 animated-element boxs">
           <div class="school-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="senior-high">
-            <h5>2018 - 2020</h5>
+            <h5 class="school-year">2018 - 2020</h5>
             <h4>COMPUTER SYSTEM SERVICING</h4>
             <h5>Bulan National High School</h5>
           </div>
         </div>
-        <div class="education-content-3">
+        <div class="education-content-3 animated-element boxs">
           <div class="school-icon"><i class="fa-solid fa-building-columns"></i></div>
           <div class="college">
-            <h5>2020 - 2023</h5>
+            <h5 class="school-year">2020 - 2023</h5>
             <h4>BS IN INFORMATION TECHNOLOGY</h4>
             <h5>Sorsogon State University - Bulan Campus</h5>
           </div>
         </div>
       </div>
       <h4 class="skills">WHAT I KNOW</h4>
-      <div class="skills-container position-relative">
-        <div class="skills-content position-absolute top-0 start-0">
-          <i class="fa-brands fa-html5"></i>
-          <h4>HTML</h4>
-          <p>I know the proper use of semantic tags and structuring content, understanding and utilizing HTML forms for capturing user input and data submission.</p>
-          <span>Started in 2020</span>
-        </div>
-        <div class="skills-content position-absolute top-0 end-0">
-          <i class="fa-brands fa-css3-alt"></i>
-          <h4>CSS</h4>
-          <p>I have been designing the layout and style elements in the webpage using flex-box. The wireframes that I used was Bootstrap and Tailwind CSS.</p>
-          <span>Started in 2021</span>
-        </div>
-        <div class="skills-content position-absolute top-50 start-50 translate-middle">
-          <i class="fa-brands fa-js"></i>
-          <h4>JavaScript</h4>
-          <p>To perform dynamic and interactive operations on web pages, I used to study the JS HTML DOM and still studying React JS</p>
-          <span>Started in 2022</span>
-        </div>
-        <div class="skills-content position-absolute bottom-0 start-0">
-          <i class="fa-brands fa-php"></i>
-          <h4>PHP</h4>
-          <p>I have been using and still studying PHP for server-side scripting language in performing dynamic and interactive operations on web pages.</p>
-          <span>Started in 2023</span>
-        </div>
-        <div class="skills-content position-absolute bottom-0 end-0">
-          <i class="fa-brands fa-figma"></i>
-          <h4>FIGMA</h4>
-          <p>I have been using Figma, a cloud-based design and prototyping tool, to collaborate on interface design projects.</p>
-          <span>Started in 2021</span>
-        </div>
+      <div class="skills-container">
+          <div class="skills-content">
+            <i class="fa-brands fa-html5"></i>
+            <h4>HTML5</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h4>CSS3</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-square-js"></i>
+            <h4>JavaScript</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-php"></i>
+            <h4>PHP</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-figma"></i>
+            <h4>Figma</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-git-alt"></i>
+            <h4>Git</h4>
+          </div>
+      </div>
+      <h4 class="skills plan">PLANNING TO LEARN</h4>
+      <div class="skills-container">
+          <div class="skills-content">
+            <i class="fa-brands fa-square-js"></i>
+            <h4>JavaScript</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-react"></i>
+            <h4>React JS</h4>
+          </div>
+          <div class="skills-content">
+            <i class="fa-brands fa-python"></i>
+            <h4>Python</h4>
+          </div>
+          <div class="skills-content">
+            <img src="/img/django.svg" alt="" srcset="">
+            <h4>Django</h4>
+          </div>
+          <div class="skills-content">
+            <img src="img/next.svg" alt="" srcset="">
+            <h4>Next JS</h4>
+          </div>
       </div>
       <div class="section-resume">
         <div class="name-section">Resume</div>
@@ -195,7 +220,7 @@
             </div>
           </div>
         </div>
-        <div class="portfolio-content">
+        <div class="portfolio-content"> 
           <img src="img/portfolio-c.jpg" alt="project">
           <div class="content-details">
             <h3>BUSINESS</h3>
@@ -251,34 +276,43 @@
     <!-- CONTACT SECTION STARTS HERE -->
     <section id="contact">
       <div class="contact-container">
-        <form class="form" id="myForm" action="https://formspree.io/f/mleyryar" method="POST">
-          <h4>Contact Me!</h4>
+        <form class="form boxs" id="myForm" action="https://formspree.io/f/mleyryar" method="POST">
+          <h4>Contact Me <i class="fa-solid fa-paper-plane"></i></h4>
           <span>I will respond as soon as possible</span>
           <div class="mb-3-info mt-4">
-            <div class="email">
+            <div class="email mb-3">
               <label for="email-address" class="form-label">Email address</label>
-              <input type="email" name="email" class="form-control mb-3" id="email-address" placeholder="Enter your Email here . . ." required>
-            </div>
-            <div class="row-2 d-flex flex-row justify-content-between gap-3">
-              <div class="phone w-50">
-                <label for="mobile-number" class="form-label">Phone Number</label>
-                <input type="tel" name="tel" class="form-control mb-3" id="mobile-number" placeholder="Your Number here . . .">
+              <div class="input-group">
+                <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" class="form-control" id="email-address" placeholder="Enter your Email here" required>
               </div>
-              <div class="phone w-50">
+            </div>
+            <div class="row-2 d-flex flex-lg-row justify-content-between gap-3 mb-3 flex-column">
+              <div class="phone d-inline flex-column">
+                <label for="mobile-number" class="form-label">Phone Number</label>
+                <div class="input-group">
+                  <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-mobile"></i></span>
+                  <input type="tel" name="tel" class="form-control" id="mobile-number" placeholder="Your Number here">
+                </div>
+              </div>
+              <div class="subject d-inline flex-column">
                 <label for="subject" class="form-label">Subject</label>
-                <input type="text" name="subject" class="form-control" id="subject" placeholder="The subject here . . ." required>
+                <div class="input-group">
+                  <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                  <input type="text" name="subject" class="form-control" id="subject" placeholder="The subject here" required>
+                </div>
               </div>
             </div>
           </div>
           <div class="mb-3-message">
             <label for="text-area" class="form-label">Message</label>
-            <textarea class="form-control" id="text-area" name="message" oninput="adjustTextareaHeight()" rows="5" placeholder="Enter your Message here . . ." required></textarea>
+            <textarea class="form-control" id="text-area" name="message" oninput="adjustTextareaHeight()" rows="5" placeholder="Enter your Message here" required></textarea>
           </div>
-          <div class="col-auto">
+          <div class="col-auto w-100 d-flex justify-content-end mt-2">
             <button type="submit" class="btn">Send Now</button>
           </div>
         </form>
-        <div class="personal-info">
+        <div class="personal-info boxs">
           <div class="avatar">
             <img src="img/profile-picture.png" alt="profile">
           </div>

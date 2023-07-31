@@ -38,20 +38,21 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a', '.hire-me a', '.lets-talk a']);
+const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a', '.hire-me a', '.lets-talk']);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    const duration = 700;
+    const duration = 500;
     smoothScroll(target, duration);
   });
 });
 
 // Hide navbar toggler when clicked 
-document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).forEach(function(link) {
-  link.addEventListener('click', function() {
+document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).forEach(
+  function(link) {  
+    link.addEventListener('click', function() {
     if (window.innerWidth < 992) {
       document.querySelector('.navbar-collapse').classList.remove('show');
     }
@@ -60,7 +61,7 @@ document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).f
 
 // typing animation in hero section
 function typeWriter(sentence, containerId, callback) {
-  const container = document.getElementById(containerId);
+  document.getElementById(containerId);
   const textElement = document.getElementById('text');
   const cursorElement = document.getElementById('cursor');
 
@@ -119,6 +120,60 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     document.getElementById("myForm").reset();
   }, 2000);
 });
+
+
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleScrollAnimation(containers) {
+  containers.forEach(container => {
+    const elements = document.querySelectorAll(container);
+    elements.forEach(element => {
+      if (isElementInViewport(element)) {
+      element.classList.add('show');
+      }
+    });
+  });
+}
+
+function scrollAnimationOnce(containers) {
+  handleScrollAnimation(containers);
+  window.removeEventListener('scroll', scrollAnimationOnce);
+}
+
+window.addEventListener('scroll', () => {
+  scrollAnimationOnce(['.animated-element']);
+  scrollAnimationOnce(['.animated-name']);
+});
+
+scrollAnimationOnce(['.animated-element']);
+scrollAnimationOnce(['.animated-name']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get the current year
 const currentYear = new Date().getFullYear();
