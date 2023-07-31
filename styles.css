@@ -1031,7 +1031,7 @@ main {
     }
     .contact-container {
         flex-direction: column;
-        gap: 4rem;
+        gap: 2rem;
         margin-bottom: 2rem;
     }
     .personal-info{
@@ -1069,8 +1069,6 @@ main {
     }
     #about-me {
         height: auto !important;
-        padding-top: 0.5rem;
-        padding-bottom: 1rem;
     }
     .about-container {
         flex-direction: column;
@@ -1078,6 +1076,7 @@ main {
         align-items: center;
         justify-content: center;
         width: 90%;
+        padding: 2rem 0rem;
     }
     .education-container {
         width: 90%;
@@ -1150,6 +1149,9 @@ main {
     }
     .contact-container {
         width: 90%;
+    }
+    .form span {
+        white-space: nowrap;
     }
     #footer {
         padding: 0 1.5rem;
