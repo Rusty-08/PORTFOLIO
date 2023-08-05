@@ -12,6 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Add Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="script.js" defer></script>
   <title>Rusty</title>
 </head>
@@ -46,12 +47,6 @@
       </div>
     </div>
   </nav>
-  <div class="img-left">
-    <img src="img/hero-bg.png" alt="">
-  </div>
-  <div class="img-right">
-    <img src="img/hero-bg.png" alt="">
-  </div>
   <main data-bs-spy="scroll" data-bs-target="#navigation" class="scrollspy-example" data-bs-offset="0" tabindex="0">
     <!-- HOME SECTION STARTS HERE -->
     <section id="hero">
@@ -71,9 +66,7 @@
           </div>          
         </div>
         <div class="hero-buttons">
-          <button class="my-projects boxs">
-            <a href="#portfolio">My Projects</a>
-          </button>
+            <a class="my-projects" href="#portfolio">My Projects</a>
         </div>
       </div>
       <div class="social-icons">
@@ -84,24 +77,22 @@
     </section>
     <!-- ABOUT SECTION STARTS HERE -->
     <section id="about-me">
-      <div class="about-container">
-        <div class="row">
-          <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="about-content-1 card p-lg-2 animated-element boxs">
-              <div class="card-body text-light">
-                <h5 class="card-title">HI THERE,<br>PLEASE TO MEET YOU.</h5>
-                <p class="card-text">I'm currently a college student with a course of BS in Information Technology and pursuing a career in becoming a frontend web developer.</p>
-                <a href="mycv/mycv.pdf" class="btn" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">Download CV</a>
-              </div>
+      <div class="about-container gap-lg-4 gap-2">
+        <div class="col-lg-6 mb-3 mb-sm-0">
+          <div class="about-content-1 card p-lg-2 animated-element boxs">
+            <div class="card-body text-light">
+              <h5 class="card-title">HI THERE,<br>PLEASE TO MEET YOU.</h5>
+              <p class="card-text">I'm currently a college student with a course of BS in Information Technology and pursuing a career in becoming a frontend web developer.</p>
+              <a href="mycv/mycv.pdf" class="btn download-cv" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">Download CV</a>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="about-content-2 card p-lg-2 animated-element boxs">
-              <div class="card-body text-light">
-                <h5 class="card-title">LET’S BRING<br>YOUR BRAND INTO LIFE ONLINE.</h5>
-                <p class="card-text">Let's bring your brand's unique story to life, creating captivating web experiences that will leave a lasting impression in your costumers.</p>
-                <a href="#contact" class="btn lets-talk">Let Us Talk!</a>
-              </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-content-2 card p-lg-2 animated-element boxs">
+            <div class="card-body text-light">
+              <h5 class="card-title">LET’S BRING<br>YOUR BRAND INTO LIFE ONLINE.</h5>
+              <p class="card-text">Let's bring your brand's unique story to life, creating captivating web experiences that will leave a lasting impression in your costumers.</p>
+              <a href="#contact" class="btn lets-talk">Let Us Talk!</a>
             </div>
           </div>
         </div>
@@ -115,7 +106,7 @@
       <h4 class="education">MY EDUCATION</h4>
       <div class="education-container">
         <div class="education-content-1 animated-element boxs">
-          <div class="school-icon"><i class="fa-solid fa-school-circle-check"></i></div>
+          <div class="school-icon"><i class="fa-solid fa-award"></i></div>
           <div class="junior-high">
             <h5 class="school-year">2016 - 2018</h5>
             <h4>COMPUTER HARDWARE SERVICING</h4>
@@ -123,7 +114,7 @@
           </div>
         </div>
         <div class="education-content-2 animated-element boxs">
-          <div class="school-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="school-icon"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="senior-high">
             <h5 class="school-year">2018 - 2020</h5>
             <h4>COMPUTER SYSTEM SERVICING</h4>
@@ -133,7 +124,7 @@
         <div class="education-content-3 animated-element boxs">
           <div class="school-icon"><i class="fa-solid fa-building-columns"></i></div>
           <div class="college">
-            <h5 class="school-year">2020 - 2023</h5>
+            <h5 class="school-year">2020 - 2023 | <span>Currently Fourth year</span></h5>
             <h4>BS IN INFORMATION TECHNOLOGY</h4>
             <h5>Sorsogon State University - Bulan Campus</h5>
           </div>
@@ -154,8 +145,8 @@
             <h4>JavaScript</h4>
           </div>
           <div class="skills-content">
-            <i class="fa-brands fa-php"></i>
-            <h4>PHP</h4>
+            <i class="fa-brands fa-bootstrap"></i>
+            <h4>Bootstrap</h4>
           </div>
           <div class="skills-content">
             <i class="fa-brands fa-figma"></i>
@@ -167,14 +158,14 @@
           </div>
       </div>
       <h4 class="skills plan">PLANNING TO LEARN</h4>
-      <div class="skills-container">
+      <div class="skills-container planning">
           <div class="skills-content">
             <i class="fa-brands fa-square-js"></i>
             <h4>JavaScript</h4>
           </div>
           <div class="skills-content">
             <i class="fa-brands fa-react"></i>
-            <h4>React JS</h4>
+            <h4>React</h4>
           </div>
           <div class="skills-content">
             <i class="fa-brands fa-python"></i>
@@ -195,7 +186,10 @@
     </section>
     <!-- PORTFOLIO SECTION STARTS HERE -->
     <section id="portfolio">
-      <h4 class="portfolio">MY PROJECTS</h4>
+      <div class="portfolio-header">
+        <h4 class="projects">MY PROJECTS</h4>
+        <h5 class="portfolio-title">Don't be afraid to iterate and refine; each version of your project brings you one step closer to excellence.</h5>
+      </div>
       <div class="portfolio-container">
         <div class="portfolio-content">
           <img src="img/portfolio-c.jpg" alt="project">
@@ -278,25 +272,18 @@
     <section id="contact">
       <div class="contact-container">
         <form class="form boxs" id="myForm" action="https://formspree.io/f/mleyryar" method="POST">
-          <h4>Contact Me <i class="fa-solid fa-paper-plane"></i></h4>
-          <span>I will respond as soon as possible</span>
+          <h4>Contact Me <i class="fa-solid fa-at"></i></h4>
+          <span class="contact-desc">I will respond as soon as possible</span>
           <div class="mb-3-info mt-4">
-            <div class="email mb-3">
-              <label for="email-address" class="form-label">Email address</label>
-              <div class="input-group">
-                <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-envelope"></i></span>
-                <input type="email" name="email" class="form-control" id="email-address" placeholder="Enter your Email here" required>
-              </div>
-            </div>
-            <div class="row-2 d-flex flex-lg-row justify-content-between gap-3 mb-3 flex-column">
-              <div class="phone d-inline flex-column">
-                <label for="mobile-number" class="form-label">Phone Number</label>
+            <div class="d-flex gap-lg-3 flex-lg-row flex-column">
+              <div class="email mb-3 d-inline flex-grow-1">
+                <label for="email-address" class="form-label">Email address</label>
                 <div class="input-group">
-                  <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-mobile"></i></span>
-                  <input type="tel" name="tel" class="form-control" id="mobile-number" placeholder="Your Number here">
+                  <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="email" name="email" class="form-control" id="email-address" placeholder="Enter your Email here" required>
                 </div>
               </div>
-              <div class="subject d-inline flex-column">
+              <div class="subject mb-3 flex-grow-1">
                 <label for="subject" class="form-label">Subject</label>
                 <div class="input-group">
                   <span class="input-group-text justify-content-center" id="subject_icon"><i class="fa-solid fa-envelope-open-text"></i></span>

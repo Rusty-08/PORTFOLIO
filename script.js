@@ -1,12 +1,19 @@
 // Navbar effect while scrolling
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
+  const navbarHeight = document.querySelector('.navbar').offsetHeight;
   const scrollPosition = window.scrollY;
 
-  if (scrollPosition > 0) {
+  if (scrollPosition > navbarHeight + navbarHeight) {
     navbar.classList.add('navbar-scrolled');
+    navbar.style.top = '0';
+    navbar.style.transition = '0.5s ease-in-out';
   } else {
+    navbar.style.top = '-3.5rem';
     navbar.classList.remove('navbar-scrolled');
+  }
+  if (scrollPosition === 0) {
+    navbar.style.top = '0';
   }
 });
 
@@ -38,7 +45,7 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects a', '.hire-me a', '.lets-talk']);
+const navLinks = document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link', '.my-projects', '.hire-me a', '.lets-talk']);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -51,13 +58,13 @@ navLinks.forEach((link) => {
 
 // Hide navbar toggler when clicked 
 document.querySelectorAll(['.navbar-nav .nav-link', '.contact-btn .nav-link']).forEach(
-  function(link) {  
-    link.addEventListener('click', function() {
-    if (window.innerWidth < 992) {
-      document.querySelector('.navbar-collapse').classList.remove('show');
-    }
+  function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 992) {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+      }
+    });
   });
-});
 
 // typing animation in hero section
 function typeWriter(sentence, containerId, callback) {
@@ -88,7 +95,6 @@ const sentences = [
   'Front-end web developer',
   'UI/UX designer',
   'Freelancer',
-  'Transforming visions into digital realities'
 ];
 
 let index = 0;
@@ -114,9 +120,9 @@ function adjustTextareaHeight() {
 }
 
 // Remove the inputted data in form after the submit button is clicked
-document.getElementById("myForm").addEventListener("submit", function(event) {
+document.getElementById("myForm").addEventListener("submit", function (event) {
 
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("myForm").reset();
   }, 2000);
 });
@@ -137,7 +143,7 @@ function handleScrollAnimation(containers) {
     const elements = document.querySelectorAll(container);
     elements.forEach(element => {
       if (isElementInViewport(element)) {
-      element.classList.add('show');
+        element.classList.add('show');
       }
     });
   });
@@ -177,4 +183,4 @@ scrollAnimationOnce(['.animated-name']);
 
 // Get the current year
 const currentYear = new Date().getFullYear();
-  document.getElementById("current-year").textContent = currentYear;
+document.getElementById("current-year").textContent = currentYear;
