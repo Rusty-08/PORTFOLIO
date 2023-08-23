@@ -551,11 +551,6 @@ main {
     background-color: rgba(0, 117, 164, 0.1);
 }
 
-.skills-content:hover {
-    transform: scale(0.95);
-    background-color: rgba(0, 117, 164, 0.2);
-}
-
 .skills-content i {
     font-size: 3rem;
     color: var(--color-yellow);
@@ -580,22 +575,25 @@ main {
 .education, .skills, .plan {
     width: max-content;
     margin: 2rem 0rem;
+    transition: padding 1s ease-in-out;
+    white-space: nowrap;
 }
 
 .skills, .plan {
     margin-top: 4rem;
 }
 
-.skill-header h4 {
-    padding-left: 5rem;
+.planning {
+    padding-bottom: 2rem;
 }
 
-.education, .plan {
+.education-header .animated-element.show,
+.plan-header .animated-element.show {
     padding-right: 5rem;
 }
 
-.planning {
-    padding-bottom: 2rem;
+.skill-header .animated-element.show {
+    padding-left: 5rem;
 }
 
 /* Portfolio Section */
@@ -639,7 +637,6 @@ main {
 
 .portfolio-header .projects {
     width: 100%;
-    margin-top: 2rem;
 }
 
 .portfolio-header .portfolio-title {
@@ -650,25 +647,6 @@ main {
     width: max-content;
     white-space: nowrap;
     margin-top: 0.5rem;
-}
-
-.portfolio-header .portfolio-title::before, .portfolio-header .portfolio-title::after {
-    position: absolute;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 600;
-    font-size: 0.88rem;
-}
-
-.portfolio-header .portfolio-title::before {
-    content: '\f10d';
-    left: -1.2rem;
-    top: -0.5rem;
-}
-
-.portfolio-header .portfolio-title::after {
-    content: '\f10e';
-    right: -1.2rem;
-    top: -0.5rem;
 }
 
 .portfolio-container {
@@ -733,6 +711,10 @@ main {
 
 .tech-used i:last-child {
     color: #563D7C;
+}
+
+.rps i:last-child {
+    color: #F7DF1E;
 }
 
 .content-details h2 {
@@ -1172,12 +1154,8 @@ main {
     .junior-high h4, .senior-high h4, .college h4 {
         letter-spacing: 1px;
     }
-    .education, .skills {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+    .skills-container, .education-header, .skill-header, .plan-header {
         width: 80%;
-        font-size: 1rem;
-        text-align: center;
     }
 }
 
@@ -1263,10 +1241,13 @@ main {
     }
     .education-header, .skill-header, .plan-header {
         width: 90%;
+        text-align: center !important;
     }
     .education, .skills, .plan {
         width: 100%;
         margin: 2rem 0 1rem 0;
+        font-size: 1rem;
+        padding: 0.5rem 0 !important;
     }
     .skill-header h4 {
         padding-left: 0;
@@ -1304,6 +1285,9 @@ main {
     }
     .portfolio-header .projects {
         font-size: 1rem;
+    }
+    .portfolio-header .portfolio-title {
+        display: none;
     }
     .portfolio-container {
         width: 90% !important;

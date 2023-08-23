@@ -162,24 +162,19 @@ window.addEventListener('scroll', () => {
 scrollAnimationOnce(['.animated-element']);
 scrollAnimationOnce(['.animated-name']);
 
+const skillContent = document.querySelectorAll('.skills-content')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+skillContent.forEach(box => {
+  box.addEventListener('mouseenter', () => {
+    box.style.transform = 'rotate(10deg)'
+    box.style.transition = '0.1s ease-in'
+  })
+  box.addEventListener('mouseleave', () => {
+    box.style.transform = 'rotate(-10deg)'
+    box.style.transition = '0.3s ease-out'
+    setTimeout(() => box.style.transform = 'rotate(0deg)', 200)
+  })
+})
 
 // Get the current year
 const currentYear = new Date().getFullYear();
