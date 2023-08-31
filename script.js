@@ -7,12 +7,11 @@ window.addEventListener('scroll', function () {
   if (scrollPosition > navbarHeight + navbarHeight) {
     navbar.classList.add('navbar-scrolled');
     navbar.style.top = '0';
-    navbar.style.transition = '0.5s ease-in-out';
   } else {
     navbar.style.top = '-3.5rem';
     navbar.classList.remove('navbar-scrolled');
   }
-  if (scrollPosition === 0) {
+  if (scrollPosition == 0) {
     navbar.style.top = '0';
   }
 });
@@ -21,7 +20,7 @@ window.addEventListener('scroll', function () {
 function smoothScroll(target, duration) {
   const targetElement = document.querySelector(target);
   const navbarHeight = document.querySelector('.navbar').offsetHeight;
-  const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+  const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
   const startPosition = window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime = null;
@@ -173,6 +172,18 @@ skillContent.forEach(box => {
     box.style.transform = 'rotate(-10deg)'
     box.style.transition = '0.3s ease-out'
     setTimeout(() => box.style.transform = 'rotate(0deg)', 200)
+  })
+})
+
+// fix nav-link bug
+
+const clickedNavLinks = document.querySelectorAll('.nav-link')
+
+clickedNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    clickedNavLinks.forEach(link => link.classList.remove('active'));
+
+    link.classList.add('active');
   })
 })
 
