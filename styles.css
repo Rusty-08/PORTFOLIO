@@ -1288,6 +1288,9 @@ main {
         line-height: 1rem;
         padding-bottom: 0.5rem;
     }
+    .planning {
+        padding-bottom: 0;
+    }
     .skills-container {
         width: 90%;
     }
@@ -1306,6 +1309,9 @@ main {
     }
     .skills-content img {
         width: 2rem;
+    }
+    .portfolio-container {
+        margin-bottom: 0;
     }
     .portfolio-header {
         margin-top: 2rem;
@@ -1326,6 +1332,7 @@ main {
     }
     .contact-container {
         width: 90%;
+        padding-top: 4rem;
     }
     .form h4 {
         width: 100%;
