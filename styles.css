@@ -133,6 +133,10 @@ main {
     opacity: 1;
 }
 
+.contact-btn .nav-link:hover::before {
+    display: none;
+}
+
 .contact-btn a:hover {
     border-color: var(--color-yellow);
     color: var(--color-yellow) !important;
@@ -651,9 +655,6 @@ main {
     font-size: 1.2rem;
     color: var(--color-yellow);
     font-weight: 400;
-    letter-spacing: 1px;
-    border-bottom: solid 1px rgba(0, 117, 164, 0.5);
-    padding-bottom: 0.5rem;
 }
 
 .education, .skills, .plan {
@@ -663,7 +664,18 @@ main {
 }
 
 .portfolio-header .projects {
-    width: 100%;
+    position: relative;
+}
+
+.portfolio-header .projects::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--color-pure-yellow);
+    bottom: -0.7rem;
+    margin-left: 35%;
 }
 
 .portfolio-header .portfolio-title {
@@ -672,8 +684,8 @@ main {
     font-weight: 400;
     position: relative;
     width: max-content;
-    white-space: nowrap;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    width: 600px;
 }
 
 .portfolio-container {
@@ -736,8 +748,14 @@ main {
     color: #F7DF1E;
 }
 
-.tech-used i:last-child {
+.tech-used i:nth-child(4) {
     color: #563D7C;
+}
+
+.tech-used img {
+    position: relative;
+    width: 1.1rem !important;
+    opacity: 1 !important;
 }
 
 .rps i:last-child {
@@ -1070,7 +1088,7 @@ main {
     }
     .navbar {
         height: 3.5rem !important;
-        background-color: var(--bg-color) !important;
+        background-color: var(--bg-color);
     }
     .navigation-lists {
         margin-top: 2.9rem;
@@ -1142,6 +1160,9 @@ main {
     .personal-info{
         width: 100%;
         flex-direction: column;
+    }
+    .portfolio-header .projects::before {
+        display: none;
     }
     .portfolio-title {
         font-size: 0.8rem !important;
@@ -1316,9 +1337,13 @@ main {
     .portfolio-header {
         margin-top: 2rem;
         margin-bottom: 1rem;
+        width: 90%;
     }
     .portfolio-header .projects {
         font-size: 1rem;
+        width: 100%;
+        border-bottom: solid 1px rgba(255,227,185,0.1);
+        padding-bottom: 0.5rem;
     }
     .portfolio-header .portfolio-title {
         display: none;
